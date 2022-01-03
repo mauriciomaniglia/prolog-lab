@@ -19,3 +19,7 @@ parent(alice, bill).
 
 parent(bob, carl).
 parent(bob, charlie).
+
+offspring(X, Y) :- parent(Y, X).
+mother(X, Y) :- parent(X, Y), female(X).
+grandparents(X, Z) :- parent(X, Y), parent(Y, Z).
